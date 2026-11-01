@@ -1,0 +1,79 @@
+{
+    "version": 1,
+    "name": "playerinput",
+    "maps": [
+        {
+            "name": "Player Controller",
+            "id": "6bd9ffc6-5a9c-4874-bbda-7aa95f8441ad",
+            "actions": [
+                {
+                    "name": "Player",
+                    "type": "Value",
+                    "id": "31929658-d36d-42e6-abed-13ac80e8ae87",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "826714c1-713d-4397-a1a3-b3de571b1d00",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "45bc7e10-3f9b-4b7a-b951-8fa254c771dc",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "727add90-9f05-4d0f-92b4-61b4a87b6c30",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "4a4561a4-e6e6-4cbd-a7cb-fa2a5110a7ce",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "b296534a-4443-4b93-8565-d6a7e03810d1",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
