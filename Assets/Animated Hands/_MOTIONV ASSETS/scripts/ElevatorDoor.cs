@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class ElevatorDoor : MonoBehaviour
@@ -14,57 +13,43 @@ public class ElevatorDoor : MonoBehaviour
     [Tooltip("How many seconds to wait after the player leaves before closing")]
     public float closeDelay = 5f;
 
-    private Vector3 leftClosedPos, leftOpenPos;
-    private Vector3 rightClosedPos, rightOpenPos;
-    private bool isOpen = false;
+    private float leftClosedZ;
+    private float rightClosedZ;
+    private bool isOpen;
 
-    private Coroutine closeTimer;
-
-    void Start()
+    private void Start()
     {
-        leftClosedPos = doorLeft.localPosition;
-        rightClosedPos = doorRight.localPosition;
-
-        leftOpenPos = new Vector3(leftClosedPos.x, leftClosedPos.y, leftOpenZ);
-        rightOpenPos = new Vector3(rightClosedPos.x, rightClosedPos.y, rightOpenZ);
+        leftClosedZ = doorLeft.localPosition.z;
+        rightClosedZ = doorRight.localPosition.z;
     }
 
-    void Update()
+    private void Update()
     {
-        doorLeft.localPosition = Vector3.Lerp(doorLeft.localPosition, isOpen ? leftOpenPos : leftClosedPos, Time.deltaTime * speed);
-        doorRight.localPosition = Vector3.Lerp(doorRight.localPosition, isOpen ? rightOpenPos : rightClosedPos, Time.deltaTime * speed);
+        LerpZ(doorLeft, isOpen ? leftOpenZ : leftClosedZ);
+        LerpZ(doorRight, isOpen ? rightOpenZ : rightClosedZ);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Open"))
-        {
-            if (closeTimer != null)
-            {
-                StopCoroutine(closeTimer);
-                closeTimer = null;
-            }
+        if (!other.CompareTag("Open")) return;
 
-            isOpen = true;
-        }
+        CancelInvoke(nameof(Close));
+        isOpen = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Open"))
-        {
-            if (closeTimer == null)
-            {
-                closeTimer = StartCoroutine(CloseAfterDelay());
-            }
-        }
+        if (!other.CompareTag("Open") || IsInvoking(nameof(Close))) return;
+
+        Invoke(nameof(Close), closeDelay);
     }
 
-    IEnumerator CloseAfterDelay()
-    {
-        yield return new WaitForSeconds(closeDelay);
+    private void Close() => isOpen = false;
 
-        isOpen = false;
-        closeTimer = null;
+    private void LerpZ(Transform door, float targetZ)
+    {
+        Vector3 pos = door.localPosition;
+        pos.z = Mathf.Lerp(pos.z, targetZ, Time.deltaTime * speed);
+        door.localPosition = pos;
     }
 }

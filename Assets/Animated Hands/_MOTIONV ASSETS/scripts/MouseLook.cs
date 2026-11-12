@@ -10,28 +10,18 @@ public class MouseLook : MonoBehaviour
     [Header("Settings")]
     public float mouseSensitivity = 100f;
 
-    private float xRotation = 0f;
+    private float xRotation;
 
-    void Start()
-    {
-        // Lock the mouse cursor to the center of the screen
-        Cursor.lockState = CursorLockMode.Locked;
-    }
+    private void Start() => Cursor.lockState = CursorLockMode.Locked;
 
-    void Update()
+    private void Update()
     {
         if (Mouse.current == null) return;
 
-        // Read mouse movement (New Input System)
-        float mouseX = Mouse.current.delta.x.ReadValue() * mouseSensitivity * Time.deltaTime;
-        float mouseY = Mouse.current.delta.y.ReadValue() * mouseSensitivity * Time.deltaTime;
+        Vector2 look = Mouse.current.delta.ReadValue() * mouseSensitivity * Time.deltaTime;
 
-        // Rotate the camera up and down (Pitch)
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f); // Stop the camera from flipping upside down
+        xRotation = Mathf.Clamp(xRotation - look.y, -90f, 90f);
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-
-        // Rotate the player body left and right (Yaw)
-        playerBody.Rotate(Vector3.up * mouseX);
+        playerBody.Rotate(Vector3.up * look.x);
     }
 }

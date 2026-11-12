@@ -29,81 +29,47 @@ public class MotionV_FootButton : MonoBehaviour
     public UnityEvent onButtonReleased;
 
     private Vector3 restPos;
-    private Vector3 pressedPos;
     private Renderer topRenderer;
-    private AudioSource audioSource;
-    private int objectsOnButton = 0;
+    private int objectsOnButton;
 
-    void Start()
+    private void Awake()
     {
-        if (buttonTop != null)
-        {
-            restPos = buttonTop.localPosition;
-            pressedPos = restPos - new Vector3(0, pressDepth, 0);
-            topRenderer = buttonTop.GetComponent<Renderer>();
-        }
-
-        // Auto-add an audio source if a sound is assigned
-        if (clickSound != null)
-        {
-            audioSource = gameObject.GetComponent<AudioSource>();
-            if (audioSource == null)
-            {
-                audioSource = gameObject.AddComponent<AudioSource>();
-                audioSource.playOnAwake = false;
-                audioSource.spatialBlend = 1f; // 3D sound
-            }
-        }
-
-        if (defaultMaterial != null && topRenderer != null)
-            topRenderer.material = defaultMaterial;
+        restPos = buttonTop.localPosition;
+        topRenderer = buttonTop.GetComponent<Renderer>();
+        topRenderer.sharedMaterial = defaultMaterial;
     }
 
-    void Update()
+    private void Update()
     {
-        if (buttonTop == null) return;
-
-        // Smoothly move the button down or up
-        Vector3 targetPos = (objectsOnButton > 0) ? pressedPos : restPos;
+        Vector3 targetPos = objectsOnButton > 0 ? restPos + Vector3.down * pressDepth : restPos;
         buttonTop.localPosition = Vector3.Lerp(buttonTop.localPosition, targetPos, Time.deltaTime * moveSpeed);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        // 1. Check if the object touching the button has the correct tag (e.g., "Open")
-        if (other.CompareTag(activatorTag))
+        if (!other.CompareTag(activatorTag)) return;
+
+        objectsOnButton++;
+        if (objectsOnButton > 1) return;
+
+        topRenderer.sharedMaterial = pressedMaterial;
+
+        if (clickSound != null)
         {
-            objectsOnButton++;
-
-            // Only trigger if this is the FIRST thing touching it
-            if (objectsOnButton == 1)
-            {
-                if (pressedMaterial != null && topRenderer != null)
-                    topRenderer.material = pressedMaterial;
-
-                if (audioSource != null && clickSound != null)
-                    audioSource.PlayOneShot(clickSound);
-
-                // 2. Fire the event! This is what opens the specific door.
-                onButtonPressed.Invoke();
-            }
+            AudioSource.PlayClipAtPoint(clickSound, transform.position);
         }
+
+        onButtonPressed.Invoke();
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag(activatorTag))
-        {
-            objectsOnButton = Mathf.Max(0, objectsOnButton - 1);
+        if (!other.CompareTag(activatorTag)) return;
 
-            // Only release when ALL objects have left the button
-            if (objectsOnButton == 0)
-            {
-                if (defaultMaterial != null && topRenderer != null)
-                    topRenderer.material = defaultMaterial;
+        objectsOnButton = Mathf.Max(0, objectsOnButton - 1);
+        if (objectsOnButton > 0) return;
 
-                onButtonReleased.Invoke();
-            }
-        }
+        topRenderer.sharedMaterial = defaultMaterial;
+        onButtonReleased.Invoke();
     }
 }
