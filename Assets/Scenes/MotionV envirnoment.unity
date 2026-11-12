@@ -583,8 +583,8 @@ MonoBehaviour:
   doorRight: {fileID: 907531013}
   leftOpenZ: 2.5
   rightOpenZ: -0.7
-  speed: 3
-  closeDelay: 10
+  speed: 1
+  closeDelay: 950
 --- !u!1 &56573092 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 815b8a2d3ea4726428ca777cb0df8f69, type: 3}
