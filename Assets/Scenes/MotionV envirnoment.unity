@@ -1641,8 +1641,8 @@ Transform:
   m_GameObject: {fileID: 132226538}
   serializedVersion: 2
   m_LocalRotation: {x: -0.69696, y: -0.0038458332, z: 0.0068309493, w: 0.71706724}
-  m_LocalPosition: {x: -0.001, y: 0.008, z: -0.293}
-  m_LocalScale: {x: 1.3700347, y: 0.09932899, z: 1.3700354}
+  m_LocalPosition: {x: -0.017, y: -0.034, z: -0.294}
+  m_LocalScale: {x: 1.3990793, y: 0.10143475, z: 1.39908}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1580702092}
@@ -5344,79 +5344,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343529992}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &344214224
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 110.61001
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 110.61001
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 110.60999
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.7099915
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.49
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -20.35
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.49295977
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.4929571
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.50694513
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.5069424
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-      propertyPath: m_Name
-      value: cube
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
 --- !u!1 &350513226
 GameObject:
   m_ObjectHideFlags: 0
@@ -5804,7 +5731,7 @@ Transform:
   m_GameObject: {fileID: 397618068}
   serializedVersion: 2
   m_LocalRotation: {x: -0.68250024, y: -0, z: -0, w: 0.7308854}
-  m_LocalPosition: {x: -0.012, y: 0.012, z: -0.139}
+  m_LocalPosition: {x: -0.012, y: 0.016, z: -0.2}
   m_LocalScale: {x: 0.9198654, y: 0.511951, z: 0.9198652}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6762,7 +6689,7 @@ Transform:
   m_GameObject: {fileID: 520560277}
   serializedVersion: 2
   m_LocalRotation: {x: -0.68250024, y: -0, z: -0, w: 0.7308854}
-  m_LocalPosition: {x: -0.012, y: 0.012, z: -0.139}
+  m_LocalPosition: {x: -0.012, y: 0.018, z: -0.221}
   m_LocalScale: {x: 0.9198654, y: 0.511951, z: 0.9198652}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7132,8 +7059,8 @@ Transform:
   m_GameObject: {fileID: 551044912}
   serializedVersion: 2
   m_LocalRotation: {x: -0.69696, y: -0.0038458332, z: 0.0068309493, w: 0.71706724}
-  m_LocalPosition: {x: -0.001, y: 0.008, z: -0.293}
-  m_LocalScale: {x: 1.3700347, y: 0.09932899, z: 1.3700354}
+  m_LocalPosition: {x: 0, y: -0.072, z: -0.291}
+  m_LocalScale: {x: 1.3797619, y: 0.10003422, z: 1.3797626}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1093677937}
@@ -8853,11 +8780,11 @@ GameObject:
   - component: {fileID: 678478945}
   - component: {fileID: 678478950}
   - component: {fileID: 678478949}
-  - component: {fileID: 678478948}
+  - component: {fileID: 678478951}
   - component: {fileID: 678478947}
   - component: {fileID: 678478946}
   m_Layer: 0
-  m_Name: LogicPart (1)
+  m_Name: LogicPart (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8926,43 +8853,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.57459253, y: 0.59537333, z: 0.14424771}
   m_Center: {x: 0.12853113, y: 0.18262757, z: -0.24}
---- !u!114 &678478948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678478944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18897ec5ccb68874fbac93eed60bb234, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StepButton
-  buttonTop: {fileID: 520560278}
-  pressDepth: 0.02
-  moveSpeed: 10
-  defaultMaterial: {fileID: 2100000, guid: 9a8cbc64c490fc8499adc483484b08a3, type: 2}
-  pressedMaterial: {fileID: 2100000, guid: e9213e35571b8b346ae284c8e8162202, type: 2}
-  activatorTag: Open
-  clickSound: {fileID: 0}
-  onButtonPressed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 805944166}
-        m_TargetAssemblyTypeName: SlidingDoor, Assembly-CSharp
-        m_MethodName: OpenDoor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onButtonReleased:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &678478949
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9020,6 +8910,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678478944}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &678478951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678478944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595b47950d4ae3049a7d4f3bd49fef08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Room3_Button
+  buttonID: Pink
+  sequenceManager: {fileID: 702570176}
+  buttonTop: {fileID: 520560278}
+  pressDepth: 0.09
+  moveSpeed: 5
+  clickSound: {fileID: 0}
+  defaultMaterial: {fileID: 2100000, guid: dbdc43404266b524581cea3acdd61e8b, type: 2}
+  pressedMaterial: {fileID: 2100000, guid: 68e03b629eb41aa42af155695174d801, type: 2}
+  activatorTag: Open
+  isLockedDown: 0
 --- !u!1 &688007229
 GameObject:
   m_ObjectHideFlags: 0
@@ -9512,6 +9424,78 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693584731}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &702570175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 702570177}
+  - component: {fileID: 702570176}
+  m_Layer: 0
+  m_Name: Room3_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &702570176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702570175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bef02c8f889ebd429c57e4b7cdb082e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Room3_SequenceManager
+  correctSequence:
+  - Pink
+  - Orange
+  - Yellow
+  - Blue
+  allButtons:
+  - {fileID: 2130134095}
+  - {fileID: 678478951}
+  - {fileID: 1410099619}
+  - {fileID: 1933764614}
+  onSequenceComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1341979639}
+        m_TargetAssemblyTypeName: SlidingDoor, Assembly-CSharp
+        m_MethodName: OpenDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onSequenceFailed:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &702570177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702570175}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -29.4746, y: 0.72, z: -16.79299}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &702774848
 GameObject:
   m_ObjectHideFlags: 0
@@ -10686,6 +10670,9 @@ MonoBehaviour:
   rightOpenZ: -0.7
   moveSpeed: 3
   openTime: 5
+  onDoorClosed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &806686078
 GameObject:
   m_ObjectHideFlags: 0
@@ -10713,7 +10700,7 @@ Transform:
   m_GameObject: {fileID: 806686078}
   serializedVersion: 2
   m_LocalRotation: {x: -0.68250024, y: -0, z: -0, w: 0.7308854}
-  m_LocalPosition: {x: -0.012, y: 0.012, z: -0.139}
+  m_LocalPosition: {x: -0.012, y: 0.016, z: -0.204}
   m_LocalScale: {x: 0.9198654, y: 0.511951, z: 0.9198652}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13870,8 +13857,8 @@ Transform:
   m_GameObject: {fileID: 1056206527}
   serializedVersion: 2
   m_LocalRotation: {x: -0.69696, y: -0.0038458332, z: 0.0068309493, w: 0.71706724}
-  m_LocalPosition: {x: -0.001, y: 0.008, z: -0.293}
-  m_LocalScale: {x: 1.3700347, y: 0.09932899, z: 1.3700354}
+  m_LocalPosition: {x: -0.044, y: -0.013, z: -0.294}
+  m_LocalScale: {x: 1.4863507, y: 0.107762024, z: 1.4863515}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 452827549}
@@ -15357,96 +15344,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150463037}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1153386225
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-  m_PrefabInstance: {fileID: 344214224}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1153386228}
-  - component: {fileID: 1153386227}
-  - component: {fileID: 1153386226}
-  m_Layer: 0
-  m_Name: cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &1153386226
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-  m_PrefabInstance: {fileID: 344214224}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153386225}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1153386227
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-  m_PrefabInstance: {fileID: 344214224}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153386225}
-  m_Mesh: {fileID: 8552134717624371188, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
---- !u!4 &1153386228
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 732ad2d6579037e4190bbefea5018465, type: 3}
-  m_PrefabInstance: {fileID: 344214224}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153386225}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.4929571, y: 0.50694513, z: 0.5069424, w: 0.49295977}
-  m_LocalPosition: {x: -6.7099915, y: 2.49, z: -20.35}
-  m_LocalScale: {x: 110.61001, y: 110.61001, z: 110.60999}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1171763766
 GameObject:
   m_ObjectHideFlags: 0
@@ -18231,6 +18128,21 @@ MonoBehaviour:
   rightOpenZ: -0.68
   moveSpeed: 2
   openTime: 5
+  onDoorClosed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 702570176}
+        m_TargetAssemblyTypeName: Room3_SequenceManager, Assembly-CSharp
+        m_MethodName: ResetSequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1349902804
 GameObject:
   m_ObjectHideFlags: 0
@@ -18258,7 +18170,7 @@ Transform:
   m_GameObject: {fileID: 1349902804}
   serializedVersion: 2
   m_LocalRotation: {x: -0.68250024, y: -0, z: -0, w: 0.7308854}
-  m_LocalPosition: {x: -0.012, y: 0.012, z: -0.139}
+  m_LocalPosition: {x: -0.012, y: 0.015, z: -0.187}
   m_LocalScale: {x: 0.9198654, y: 0.511951, z: 0.9198652}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19200,11 +19112,11 @@ GameObject:
   - component: {fileID: 1410099613}
   - component: {fileID: 1410099618}
   - component: {fileID: 1410099617}
-  - component: {fileID: 1410099616}
+  - component: {fileID: 1410099619}
   - component: {fileID: 1410099615}
   - component: {fileID: 1410099614}
   m_Layer: 0
-  m_Name: LogicPart (1)
+  m_Name: LogicPart (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19273,43 +19185,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.57459253, y: 0.59537333, z: 0.14424771}
   m_Center: {x: 0.12853113, y: 0.18262757, z: -0.24}
---- !u!114 &1410099616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410099612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18897ec5ccb68874fbac93eed60bb234, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StepButton
-  buttonTop: {fileID: 806686079}
-  pressDepth: 0.02
-  moveSpeed: 10
-  defaultMaterial: {fileID: 2100000, guid: 9a8cbc64c490fc8499adc483484b08a3, type: 2}
-  pressedMaterial: {fileID: 2100000, guid: e9213e35571b8b346ae284c8e8162202, type: 2}
-  activatorTag: Open
-  clickSound: {fileID: 0}
-  onButtonPressed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 805944166}
-        m_TargetAssemblyTypeName: SlidingDoor, Assembly-CSharp
-        m_MethodName: OpenDoor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onButtonReleased:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1410099617
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19367,6 +19242,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410099612}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1410099619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410099612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595b47950d4ae3049a7d4f3bd49fef08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Room3_Button
+  buttonID: Orange
+  sequenceManager: {fileID: 702570176}
+  buttonTop: {fileID: 806686079}
+  pressDepth: 0.09
+  moveSpeed: 5
+  clickSound: {fileID: 0}
+  defaultMaterial: {fileID: 2100000, guid: 11ce5f15d5209b34388c295d7ce33ade, type: 2}
+  pressedMaterial: {fileID: 2100000, guid: 68e03b629eb41aa42af155695174d801, type: 2}
+  activatorTag: Open
+  isLockedDown: 0
 --- !u!1 &1427894048
 GameObject:
   m_ObjectHideFlags: 0
@@ -19816,8 +19713,8 @@ Transform:
   m_GameObject: {fileID: 1450260960}
   serializedVersion: 2
   m_LocalRotation: {x: -0.69696, y: -0.0038458332, z: 0.0068309493, w: 0.71706724}
-  m_LocalPosition: {x: -0.001, y: 0.008, z: -0.293}
-  m_LocalScale: {x: 1.3700347, y: 0.09932899, z: 1.3700354}
+  m_LocalPosition: {x: -0.001, y: -0.042, z: -0.295}
+  m_LocalScale: {x: 1.4281242, y: 0.10354054, z: 1.4281249}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1628824901}
@@ -26459,11 +26356,11 @@ GameObject:
   - component: {fileID: 1933764608}
   - component: {fileID: 1933764613}
   - component: {fileID: 1933764612}
-  - component: {fileID: 1933764611}
+  - component: {fileID: 1933764614}
   - component: {fileID: 1933764610}
   - component: {fileID: 1933764609}
   m_Layer: 0
-  m_Name: LogicPart (1)
+  m_Name: LogicPart (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26532,43 +26429,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.57459253, y: 0.59537333, z: 0.14424771}
   m_Center: {x: 0.12853113, y: 0.18262757, z: -0.24}
---- !u!114 &1933764611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933764607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18897ec5ccb68874fbac93eed60bb234, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StepButton
-  buttonTop: {fileID: 397618069}
-  pressDepth: 0.02
-  moveSpeed: 10
-  defaultMaterial: {fileID: 2100000, guid: 9a8cbc64c490fc8499adc483484b08a3, type: 2}
-  pressedMaterial: {fileID: 2100000, guid: e9213e35571b8b346ae284c8e8162202, type: 2}
-  activatorTag: Open
-  clickSound: {fileID: 0}
-  onButtonPressed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 805944166}
-        m_TargetAssemblyTypeName: SlidingDoor, Assembly-CSharp
-        m_MethodName: OpenDoor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onButtonReleased:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1933764612
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26626,6 +26486,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933764607}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1933764614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933764607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595b47950d4ae3049a7d4f3bd49fef08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Room3_Button
+  buttonID: Yellow
+  sequenceManager: {fileID: 702570176}
+  buttonTop: {fileID: 397618069}
+  pressDepth: 0.09
+  moveSpeed: 5
+  clickSound: {fileID: 0}
+  defaultMaterial: {fileID: 2100000, guid: 6cbee2e42346f14488fc41d8ca96a66e, type: 2}
+  pressedMaterial: {fileID: 2100000, guid: 68e03b629eb41aa42af155695174d801, type: 2}
+  activatorTag: Open
+  isLockedDown: 0
 --- !u!1 &1935820807
 GameObject:
   m_ObjectHideFlags: 0
@@ -29466,7 +29348,7 @@ GameObject:
   - component: {fileID: 2130134089}
   - component: {fileID: 2130134094}
   - component: {fileID: 2130134093}
-  - component: {fileID: 2130134092}
+  - component: {fileID: 2130134095}
   - component: {fileID: 2130134091}
   - component: {fileID: 2130134090}
   m_Layer: 0
@@ -29539,43 +29421,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.57459253, y: 0.59537333, z: 0.14424771}
   m_Center: {x: 0.12853113, y: 0.18262757, z: -0.24}
---- !u!114 &2130134092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130134088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18897ec5ccb68874fbac93eed60bb234, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StepButton
-  buttonTop: {fileID: 1349902805}
-  pressDepth: 0.02
-  moveSpeed: 10
-  defaultMaterial: {fileID: 2100000, guid: 9a8cbc64c490fc8499adc483484b08a3, type: 2}
-  pressedMaterial: {fileID: 2100000, guid: e9213e35571b8b346ae284c8e8162202, type: 2}
-  activatorTag: Open
-  clickSound: {fileID: 0}
-  onButtonPressed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 805944166}
-        m_TargetAssemblyTypeName: SlidingDoor, Assembly-CSharp
-        m_MethodName: OpenDoor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onButtonReleased:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2130134093
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29633,6 +29478,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130134088}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2130134095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130134088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595b47950d4ae3049a7d4f3bd49fef08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Room3_Button
+  buttonID: Blue
+  sequenceManager: {fileID: 702570176}
+  buttonTop: {fileID: 1349902805}
+  pressDepth: 0.09
+  moveSpeed: 5
+  clickSound: {fileID: 0}
+  defaultMaterial: {fileID: 2100000, guid: 9a8cbc64c490fc8499adc483484b08a3, type: 2}
+  pressedMaterial: {fileID: 2100000, guid: 68e03b629eb41aa42af155695174d801, type: 2}
+  activatorTag: Open
+  isLockedDown: 0
 --- !u!1 &2138811299
 GameObject:
   m_ObjectHideFlags: 0
@@ -29866,7 +29733,6 @@ SceneRoots:
   - {fileID: 1501935190}
   - {fileID: 110082088}
   - {fileID: 570122844}
-  - {fileID: 344214224}
   - {fileID: 1891928946}
   - {fileID: 2037460940}
   - {fileID: 2115902081}
@@ -29881,3 +29747,4 @@ SceneRoots:
   - {fileID: 1108048503}
   - {fileID: 1586076059}
   - {fileID: 63399626}
+  - {fileID: 702570177}
