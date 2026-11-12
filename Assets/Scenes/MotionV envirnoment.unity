@@ -1159,6 +1159,11 @@ MonoBehaviour:
   m_DefaultActionMap: Player Controller
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!4 &94814786 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d4a3ae418e8609441bc51ea8e4a1ad44, type: 3}
+  m_PrefabInstance: {fileID: 110082088}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &104188354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1501,7 +1506,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d4a3ae418e8609441bc51ea8e4a1ad44, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 961739753}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d4a3ae418e8609441bc51ea8e4a1ad44, type: 3}
       insertIndex: -1
@@ -12568,6 +12576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 961739753}
   - component: {fileID: 961739752}
+  - component: {fileID: 961739754}
   - component: {fileID: 961739751}
   - component: {fileID: 961739750}
   m_Layer: 0
@@ -12688,13 +12697,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12977035, y: -0.67668504, z: 0.12294672, w: 0.71424174}
-  m_LocalPosition: {x: -15.52, y: 5.89, z: -17.65}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.044, y: 1.705, z: 0.047}
+  m_LocalScale: {x: 0.50000006, y: 0.5, z: 0.50000006}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 20.595, y: 273.09302, z: 0}
+  m_Father: {fileID: 94814786}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &961739754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961739749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18fbd9b077e22c943ac2a050753297fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MouseLook
+  playerBody: {fileID: 94814786}
+  mouseSensitivity: 2
 --- !u!1 &970730963
 GameObject:
   m_ObjectHideFlags: 0
@@ -14993,7 +15016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d12fd2c3f2cd1240a794b12225a6980, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.62
+      value: -0.32
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d12fd2c3f2cd1240a794b12225a6980, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29838,7 +29861,6 @@ MeshFilter:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 961739753}
   - {fileID: 203844589}
   - {fileID: 1434180530}
   - {fileID: 1501935190}
