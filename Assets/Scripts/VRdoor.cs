@@ -1,52 +1,59 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.XR.Interaction.Toolkit.Interactables; 
-using UnityEngine.XR.Interaction.Toolkit.Interactors;
-public class VRdoor : XRSimpleInteractable
+using UnityEngine.Events;
+
+public class VRdoor : MonoBehaviour
 {
-    public Transform hinge;
+    [SerializeField] private Transform doorL, doorR;
+    [SerializeField] private float leftOpenZ = 2.5f, rightOpenZ = -0.7f;
+    [SerializeField] private float moveSpeed = 2f, openTime = 10f;
+    public UnityEvent onDoorClosed;
 
-    public Transform hand;
+    private float leftClosedZ, rightClosedZ, closeTimer;
+    private bool isOpen, isMoving;
 
-    public float doorAngle;
-    public float startHandAngle;
-    public float startDoorAngle;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        
+        leftClosedZ = doorL.localPosition.z;
+        rightClosedZ = doorR.localPosition.z;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OpenDoor()
     {
-        if(hand == null) return;
-
-        float handMoved = Mathf.DeltaAngle(HandAngle(), startHandAngle);
-        hinge.localRotation = Quaternion.Euler(0, startDoorAngle - handMoved, 0);
+        closeTimer = openTime;
+        if (!isOpen && !isMoving) StartCoroutine(DoorCycle());
     }
 
-    protected override void OnSelectEntered(SelectEnterEventArgs interactor)
+    private IEnumerator DoorCycle()
     {
-        base.OnSelectEntered(interactor);
-        hand = interactor.interactorObject.transform;
+        isMoving = true;
+        yield return Slide(leftOpenZ, rightOpenZ);
+        isOpen = true;
+        isMoving = false;
 
-        startHandAngle = HandAngle();
-        startDoorAngle = doorAngle; 
+        while (closeTimer > 0f) { closeTimer -= Time.deltaTime; yield return null; }
+
+        isMoving = true;
+        isOpen = false;
+        yield return Slide(leftClosedZ, rightClosedZ);
+        isMoving = false;
+        onDoorClosed.Invoke();
     }
 
-    protected override void OnSelectExited(SelectExitEventArgs interactor)
+    private IEnumerator Slide(float lz, float rz)
     {
-        base.OnSelectExited(interactor);
-        hand = null;
+        while (!Mathf.Approximately(doorL.localPosition.z, lz) ||
+               !Mathf.Approximately(doorR.localPosition.z, rz))
+        {
+            float s = moveSpeed * Time.deltaTime;
+            SetZ(doorL, lz, s);
+            SetZ(doorR, rz, s);
+            yield return null;
+        }
     }
 
-    float HandAngle()
-    { 
-       Vector3 handDir = hand.position - hinge.position;
-       return Mathf.Atan2(handDir.x, handDir.z) * Mathf.Rad2Deg;
-
+    private static void SetZ(Transform t, float z, float s)
+    {
+        var p = t.localPosition; p.z = Mathf.MoveTowards(p.z, z, s); t.localPosition = p;
     }
-    float CurrentAngle() => Mathf.Atan2(hinge.forward.x, hinge.forward.z) * Mathf.Rad2Deg;
 }

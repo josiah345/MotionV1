@@ -6,8 +6,11 @@ public class FootFollowHead : MonoBehaviour
     public Transform origin;
     public Vector3 offset;
 
-    public MotionVSerialReceiver receiver; // drag the receiver object here
-    public float moveSpeed = 1.5f;         // metres per second
+    public MotionVSerialReceiver receiver;
+    public float moveSpeed = 1.5f;
+    public float stopDistance = 0.3f;   
+    public float maxRayDistance = 20f;
+    public LayerMask walkableMask = ~0; 
 
     bool moving = false;
 
@@ -23,11 +26,18 @@ public class FootFollowHead : MonoBehaviour
     {
         if (!moving) return;
 
-        Vector3 dir = head.forward;
-        dir.y = 0f;
-        dir.Normalize();
+        Vector3 target;
+        if (Physics.Raycast(head.position, head.forward, out RaycastHit hit, maxRayDistance, walkableMask))
+            target = hit.point;
+        else
+            target = head.position + head.forward * maxRayDistance;
 
-        origin.position += dir * moveSpeed * Time.deltaTime;
+        Vector3 toTarget = target - origin.position;
+        toTarget.y = 0f;
+
+        if (toTarget.magnitude <= stopDistance) return;
+
+        origin.position += toTarget.normalized * moveSpeed * Time.deltaTime;
     }
 
     void LateUpdate()
