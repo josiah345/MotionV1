@@ -4,24 +4,13 @@ using UnityEngine.Events;
 
 public class SlidingDoor : MonoBehaviour
 {
-    [Header("Door Parts")]
-    [SerializeField] private Transform doorL;
-    [SerializeField] private Transform doorR;
-
-    [Header("Open Positions (Z)")]
-    [SerializeField] private float leftOpenZ = 2.5f;
-    [SerializeField] private float rightOpenZ = -0.7f;
-
-    [Header("Settings")]
-    [SerializeField] private float moveSpeed = 2f;
-    [SerializeField] private float openTime = 10f;
-
-    [Header("Events")]
+    [SerializeField] private Transform doorL, doorR;
+    [SerializeField] private float leftOpenZ = 2.5f, rightOpenZ = -0.7f;
+    [SerializeField] private float moveSpeed = 2f, openTime = 10f;
     public UnityEvent onDoorClosed;
 
-    private float leftClosedZ;
-    private float rightClosedZ;
-    private bool isMoving;
+    private float leftClosedZ, rightClosedZ, closeTimer;
+    private bool isOpen, isMoving;
 
     private void Start()
     {
@@ -31,37 +20,40 @@ public class SlidingDoor : MonoBehaviour
 
     public void OpenDoor()
     {
-        if (!isMoving) StartCoroutine(OpenAndClose());
+        closeTimer = openTime;
+        if (!isOpen && !isMoving) StartCoroutine(DoorCycle());
     }
 
-    private IEnumerator OpenAndClose()
+    private IEnumerator DoorCycle()
     {
         isMoving = true;
-
-        yield return MoveDoors(leftOpenZ, rightOpenZ);
-        yield return new WaitForSeconds(openTime);
-        yield return MoveDoors(leftClosedZ, rightClosedZ);
-
-        onDoorClosed.Invoke();
+        yield return Slide(leftOpenZ, rightOpenZ);
+        isOpen = true;
         isMoving = false;
+
+        while (closeTimer > 0f) { closeTimer -= Time.deltaTime; yield return null; }
+
+        isMoving = true;
+        isOpen = false;
+        yield return Slide(leftClosedZ, rightClosedZ);
+        isMoving = false;
+        onDoorClosed.Invoke();
     }
 
-    private IEnumerator MoveDoors(float leftZ, float rightZ)
+    private IEnumerator Slide(float lz, float rz)
     {
-        while (!Mathf.Approximately(doorL.localPosition.z, leftZ) ||
-               !Mathf.Approximately(doorR.localPosition.z, rightZ))
+        while (!Mathf.Approximately(doorL.localPosition.z, lz) ||
+               !Mathf.Approximately(doorR.localPosition.z, rz))
         {
-            float step = moveSpeed * Time.deltaTime;
-            MoveZ(doorL, leftZ, step);
-            MoveZ(doorR, rightZ, step);
+            float s = moveSpeed * Time.deltaTime;
+            SetZ(doorL, lz, s);
+            SetZ(doorR, rz, s);
             yield return null;
         }
     }
 
-    private static void MoveZ(Transform door, float targetZ, float step)
+    private static void SetZ(Transform t, float z, float s)
     {
-        Vector3 pos = door.localPosition;
-        pos.z = Mathf.MoveTowards(pos.z, targetZ, step);
-        door.localPosition = pos;
+        var p = t.localPosition; p.z = Mathf.MoveTowards(p.z, z, s); t.localPosition = p;
     }
 }
