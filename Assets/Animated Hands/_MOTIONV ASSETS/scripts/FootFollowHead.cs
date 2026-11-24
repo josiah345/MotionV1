@@ -8,11 +8,17 @@ public class FootFollowHead : MonoBehaviour
 
     public MotionVSerialReceiver receiver;
     public float moveSpeed = 1.5f;
-    public float stopDistance = 0.3f;   // stop when this close to the target
+    public float stopDistance = 0.3f;
     public float maxRayDistance = 20f;
-    public LayerMask walkableMask = ~0; // layers the gaze ray can hit
+    public LayerMask walkableMask = ~0;
 
+    CharacterController controller;
     bool moving = false;
+
+    void Awake()
+    {
+        controller = origin.GetComponent<CharacterController>();
+    }
 
     void OnEnable()  { if (receiver) receiver.OnFootState += HandleFoot; }
     void OnDisable() { if (receiver) receiver.OnFootState -= HandleFoot; }
@@ -33,11 +39,13 @@ public class FootFollowHead : MonoBehaviour
             target = head.position + head.forward * maxRayDistance;
 
         Vector3 toTarget = target - origin.position;
-        toTarget.y = 0f; // stay on the floor
+        toTarget.y = 0f;
 
         if (toTarget.magnitude <= stopDistance) return;
 
-        origin.position += toTarget.normalized * moveSpeed * Time.deltaTime;
+        Vector3 move = toTarget.normalized * moveSpeed * Time.deltaTime;
+        move.y = -0.5f * Time.deltaTime; 
+        controller.Move(move);
     }
 
     void LateUpdate()
