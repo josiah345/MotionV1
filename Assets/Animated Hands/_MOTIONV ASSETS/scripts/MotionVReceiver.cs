@@ -5,7 +5,7 @@ using System.Collections.Concurrent;
 
 public class MotionVSerialReceiver : MonoBehaviour
 {
-    public event System.Action<int> OnFootState; // 1 or 0
+    public event System.Action<int> OnFootState; 
 
     SerialPort serial;
     Thread readThread;

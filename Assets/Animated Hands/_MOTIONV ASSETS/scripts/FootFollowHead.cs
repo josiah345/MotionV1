@@ -5,15 +5,15 @@ public class FootFollowHead : MonoBehaviour
     public Transform head;
     public Transform origin;
     public Vector3 offset;
-
     public MotionVSerialReceiver receiver;
     public float moveSpeed = 1.5f;
     public float stopDistance = 0.3f;
     public float maxRayDistance = 20f;
     public LayerMask walkableMask = ~0;
+    public float moveHoldTime = 0.4f;
 
     CharacterController controller;
-    bool moving = false;
+    float moveUntil = 0f;
 
     void Awake()
     {
@@ -25,12 +25,13 @@ public class FootFollowHead : MonoBehaviour
 
     void HandleFoot(int state)
     {
-        moving = (state == 1);
+        if (state == 1)
+            moveUntil = Time.time + moveHoldTime;
     }
 
     void Update()
     {
-        if (!moving) return;
+        if (Time.time > moveUntil) return;
 
         Vector3 target;
         if (Physics.Raycast(head.position, head.forward, out RaycastHit hit, maxRayDistance, walkableMask))
@@ -44,7 +45,7 @@ public class FootFollowHead : MonoBehaviour
         if (toTarget.magnitude <= stopDistance) return;
 
         Vector3 move = toTarget.normalized * moveSpeed * Time.deltaTime;
-        move.y = -0.5f * Time.deltaTime; 
+        move.y = -0.5f * Time.deltaTime;
         controller.Move(move);
     }
 
